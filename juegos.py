@@ -20,7 +20,6 @@ def guardar_datos(archivo,nombre,juego):
 			 dicc.setdefault(nombre,lista)
 	with open(archivo,'w') as f:
 		 json.dump(dicc,f)
-		 sg.Popup(dicc)
 
 
 
