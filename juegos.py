@@ -7,13 +7,13 @@ import json
 archivo='jugadores.txt'
 dicc={}
 with open(archivo,'w')as f:
-	json.dump(dicc,f)
+	json.dump(dicc,f)  #utilizo json para que pueda manejarme de manera mas facil con el txt
 
 def guardar_datos(archivo,nombre,juego):
 	with open(archivo,'r') as f:
 		 dicc=json.load(f)
 		 if nombre in dicc.keys():
-			 dicc[nombre]+=[juego]
+			 dicc[nombre]+=[juego] #guardo los datos en un diccionario donde las keys son los jugadores y contienen una lista de los juegos que fue jugando
 		 else:
 			 lista=[]
 			 lista.append(juego)
